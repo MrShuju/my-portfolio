@@ -149,3 +149,11 @@ nav ul li a:hover::after{
     font-size: 14px;
     font-style: italic;
 }
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}

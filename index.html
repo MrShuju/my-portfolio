@@ -38,11 +38,11 @@
             Previously, I held the position of Pricing Executive at Metro Cash and Carry, where I focused on strategic pricing and market intelligence. My role involved developing precise pricing strategies to meet buyer expectations, executing effective store pricing, and maintaining a competitive edge through comprehensive benchmarking and industry analysis. This experience sharpened my analytical skills and commitment to excellence, equipping me to support impactful, data-informed strategies.</p>
 
             <div class="tab-titles">
-                <p class="tab-links active-link">Skills</p>
-                <p class="tab-links">Experience</p>
-                <p class="tab-links">Education</p>
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                <p class="tab-links"onclick="opentab('education')">Education</p>
             </div>
-            <div class="tab-contents">
+            <div class="tab-contents active-tab" id="skills">
                 <ul>
                     <li><span>Excel Automation(VBA)</span><br>Creating Automation in Excel using macro</li>
                     <li><span>Power BI</span><br>Creating Dashboard and Reports</li>
@@ -50,10 +50,41 @@
                     <li><span>SQL</span><br>Extracting and uploading data to warehouse</li>
                 </ul>
             </div>
+
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>May 2024 - Current</span><br>Associate Engineer at Alten India Private Limited</li>
+                    <li><span>Dec 2022- May 2024 </span><br>Pricing Executive at Metro Cash and Carry</li>
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>October 2022</span><br>B.Com at Bangalore University</li>
+                    <li><span>July 2019</span><br>12th at Department of Pre-University Education </li>
+                    <li><span>May 2017</span><br>SSLC at Karnataka Secondary Education Examination Board</li> 
+                </ul>
+            </div>
     </div>
     </div>
+</div>
 </div>
 
-</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
 </body>
 </html>
