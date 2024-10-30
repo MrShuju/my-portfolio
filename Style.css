@@ -182,13 +182,14 @@ nav ul li a:hover::after{
 
 .projects-list div h2{
     font-size: 25px;
+    color: #ababab;;
     font-weight: 500;
     margin-bottom: 15px;
     font-style: italic;
 }
 .projects-list div a{
     text-decoration: none;
-    color:#fff ;
+    color:#ababab; ;
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
@@ -201,6 +202,7 @@ nav ul li a:hover::after{
 }
 
 .projects-list p {
+    color: #ababab;;
     max-height: 100px; /* Limit height for short description */
     overflow: hidden; /* Hide overflow */
     transition: max-height 0.3s ease; /* Smooth transition */
