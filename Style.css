@@ -213,3 +213,111 @@ nav ul li a:hover::after{
     max-height: 500px; /* Adjust to accommodate long descriptions */
     overflow: visible; /* Show overflow */
 }
+
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-left p{
+    margin-top: 30px;
+
+}
+
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size:30px ;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: #ff004f;
+
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+    margin-right: 15px;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.copyright i{
+    color: #ff004f;
+}
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width:600px){
+    #header {
+        background-image: url(https://raw.githubusercontent.com/MrShuju/my-portfolio/main/Phonebg.png); 
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+        font-style: italic;
+    }
+    .header-text h1{
+        font-size: 30px;
+        font-style: italic;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+    }
+nav ul li{
+    display: block;
+    margin: 25px;
+}
+nav ul .fa-solid{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+}
+}
