@@ -69,9 +69,49 @@
     </div>
 </div>
 </div>
-<!-------Project------->
+
+   <!-------Projects-------> 
+
+   <div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="projects-list">
+            <div>
+                <h2>Price Checking Automation</h2>
+                <p id="project-description-1">Created an Excel VBA automation to forecast prices and prevent margin loss by streamlining competitive pricing adjustments.</p>
+                <a href="#" id="toggle-link-1" onclick="toggleDescription(event, 1)">Learn more</a>
+            </div>
+
+            <div>
+                <h2>Investment Analysis Automation</h2>
+                <p id="project-description-2">Developed an Excel VBA tool for real-time tracking and analysis of business investments, enabling strategic insights into profitability and optimizing promotional effectiveness.</p>
+                <a href="#" id="toggle-link-2" onclick="toggleDescription(event, 2)">Learn more</a>
+            </div>
+
+            <div>
+                <h2>PBM PE Input Automation</h2>
+                <p id="project-description-3">Created a VBA-based "PBM PE Inputs" automation to streamline competitor pricing updates and MRP recalculations across 20 locations, ensuring pricing accuracy, efficiency, and integrity.</p>
+                <a href="#" id="toggle-link-3" onclick="toggleDescription(event, 3)">Learn more</a>
+            </div>
+
+            <div>
+                <h2>Sales Report Dashboard</h2>
+                <p id="project-description-4">Developed Python and SQL automation to extract, process, and analyze sales data from Teradata and SAP, enabling growth analysis, automated reporting, and Excel dashboard creation for accessible insights and stakeholder updates.</p>
+                <a href="#" id="toggle-link-4" onclick="toggleDescription(event, 4)">Learn more</a>
+            </div>
+
+            <div>
+                <h2>High Volume Sales Margin Monitoring Automation Dashboard (HVS-MMD)</h2>
+                <p id="project-description-5">Built an automated dashboard integrating Teradata and Python for real-time sales margin monitoring. Enhanced decision-making and early loss detection with interactive, color-coded indicators, receiving positive feedback and planning ML-driven predictive expansions.</p>
+                <a href="#" id="toggle-link-5" onclick="toggleDescription(event, 5)">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
-    var tablinks = document.getElementsByClassName("tab-links");
+
+var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
     
     function opentab(tabname){
@@ -83,6 +123,49 @@
         }
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
+    }
+
+
+    const projectDescriptions = {
+        1: {
+            short: "Created an Excel VBA automation to forecast prices and prevent margin loss by streamlining competitive pricing adjustments.",
+            long: " I developed and implemented an Excel VBA-based price checking automation system to forecast and prevent potential margin loss by accurately predicting and adjusting prices for the following day. This system streamlines pricing processes to enhance competitiveness and proactively safeguards against margin erosion."
+        },
+        2: {
+            short: "Developed an Excel VBA tool for real-time tracking and analysis of business investments, enabling strategic insights into profitability and optimizing promotional effectiveness.",
+            long: "I developed an advanced Excel automation tool using VBA to analyze and optimize business investments for strategic decision-making. This tool enables real-time tracking of investments for offers and discounts, assesses income from various activities, and identifies high-investment, low-return product segments to facilitate targeted financial adjustments."
+        },
+        3: {
+            short: "Created a VBA-based 'PBM PE Inputs' automation to streamline competitor pricing updates and MRP recalculations across 20 locations, ensuring pricing accuracy, efficiency, and integrity.",
+            long: "I developed the 'PBM PE Inputs' automation using VBA to streamline pricing updates for executives across 20 locations. This solution automates competitor price updates and recalculates MRP and selling prices based on location-specific data, ensuring accuracy and efficiency while maintaining pricing integrity and significantly improving workflow efficiency."
+        },
+        4: {
+            short: "Developed Python and SQL automation to extract, process, and analyze sales data from Teradata and SAP, enabling growth analysis, automated reporting, and Excel dashboard creation for accessible insights and stakeholder updates.",
+            long: "I automated sales data extraction using Python and SQL from Teradata and SAP, facilitating both monthly and daily retrieval. Developed scripts for data processing and analysis, including year-over-year comparisons, and created an Excel dashboard with Pivot Tables for user-friendly insights, while also automating reporting to stakeholders."
+        },
+        5: {
+            short: "Built an automated dashboard integrating Teradata and Python for real-time sales margin monitoring.",
+            long: "I developed an automated dashboard for monitoring high-volume sales margins by integrating Teradata with Python for data extraction using SQL queries. This dashboard provides real-time insights into margin performance, facilitating timely decision-making and optimizing profitability. I designed an intuitive user interface using Python libraries like Dash and Plotly to visualize key metrics such as sales volume, revenue, costs, and margins. By implementing color-coded indicators, the dashboard helps identify potential losses early, allowing for quick issue resolution. The initiative received positive feedback for streamlining monitoring processes, and I plan to enhance it further by incorporating machine learning algorithms for predictive analysis and expanding its functionality."
+        }
+    };
+
+    function toggleDescription(event, projectId) {
+        // Prevent default link behavior
+        event.preventDefault();
+
+        const descriptionElement = document.getElementById(`project-description-${projectId}`);
+        const linkElement = document.getElementById(`toggle-link-${projectId}`);
+
+        // Check current state and toggle
+        if (descriptionElement.innerText === projectDescriptions[projectId].short) {
+            descriptionElement.innerText = projectDescriptions[projectId].long;
+            linkElement.innerText = "Show Less";
+            descriptionElement.classList.add("expanded"); // Add class for expanded state
+        } else {
+            descriptionElement.innerText = projectDescriptions[projectId].short;
+            linkElement.innerText = "Learn More";
+            descriptionElement.classList.remove("expanded"); // Remove class for collapsed state
+        }
     }
 </script>
 
